@@ -2,6 +2,7 @@ import searchicon from './../../assets/Images/search.png'
 import filtericon from './../../assets/Images/filter.png'
 
 import pic from './../../assets/Images/pic.png'
+import AllCandidates from './AllCandidates';
 
 
 const Application = () => {
@@ -17,42 +18,13 @@ const Application = () => {
                 <option>Backend Developer</option>
             </select>
 
-            <div role="tablist" className="tabs tabs-bordered mt-5 bg-white">
-  <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="All" />
+            <div role="tablist" className="tabs tabs-bordered py-3 mb-4  mt-5 bg-white">
+  <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold " aria-label="All"  />
   <div role="tabpanel" className="tab-content p-10 bg-[#e0edea]">
     
    <div>
-   <div className="overflow-x-auto">
-  <table className="table">
-    {/* head */}
-    <thead>
-     
-    </thead>
-    <tbody>
-      {/* row  */}
-      <tr>
-        <td>
-          <div className="flex items-center gap-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                <img src={pic} alt="pic" />
-              </div>
-            </div>
-            <div>
-              <div className="font-bold">Markas ilab</div>
-              <div className="text-sm opacity-50">4 year exp. | Expected 45k</div>
-            </div>
-          </div>
-        </td>
-       
-        <td>Shortlist</td>
-        <td>Rejected</td>
-        
-    </tr>
-    </tbody> 
-  </table>
-</div>
-    
+ 
+    <AllCandidates/>
    </div>
     
     </div>
