@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/Images/logo.png'
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-bold text-blue-500">
       <li><a>Home</a></li>
-      <li><a>Dashboard</a></li>
+      <NavLink to="/dashboard/dash"><li><a>Dashboard</a></li></NavLink>
       <li><a>Contact</a></li>
       <li><a>About</a></li>
       </ul>
@@ -20,7 +21,7 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex font-bold text-[#11998e]">
     <ul className="menu menu-horizontal px-1">
       <li><a>Home</a></li>
-      <li><a>Dashboard</a></li>
+      <NavLink to="/dashboard/dash"><li><a>Dashboard</a></li></NavLink>
       <li><a>Contact</a></li>
       <li><a>About</a></li>
     </ul>
