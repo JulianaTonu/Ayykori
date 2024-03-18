@@ -1,5 +1,9 @@
 import searchicon from './../../assets/Images/search.png'
 import filtericon from './../../assets/Images/filter.png'
+
+import pic from './../../assets/Images/pic.png'
+
+
 const Application = () => {
     return (
         <div className="pl-5 p-3 bg-[#e0edea] min-h-full">
@@ -14,21 +18,102 @@ const Application = () => {
             </select>
 
             <div role="tablist" className="tabs tabs-bordered mt-5 bg-white">
-  <input type="radio" name="my_tabs_1" role="tab" className="tab" aria-label="All" />
-  <div role="tabpanel" className="tab-content p-10">Tab content 1</div>
+  <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="All" />
+  <div role="tabpanel" className="tab-content p-10 bg-[#e0edea]">
+    
+   <div>
+   <div className="overflow-x-auto">
+  <table className="table">
+    {/* head */}
+    <thead>
+     
+    </thead>
+    <tbody>
+      {/* row  */}
+      <tr>
+        <td>
+          <div className="flex items-center gap-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={pic} alt="pic" />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold">Markas ilab</div>
+              <div className="text-sm opacity-50">4 year exp. | Expected 45k</div>
+            </div>
+          </div>
+        </td>
+       
+        <td>Shortlist</td>
+        <td>Rejected</td>
+        
+    </tr>
+    </tbody> 
+  </table>
+</div>
+    
+   </div>
+    
+    </div>
 
-  <input type="radio" name="my_tabs_1" role="tab" className="tab" aria-label="Shortlisted" checked />
-  <div role="tabpanel" className="tab-content p-10">Shortlisted</div>
+  <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="Shortlisted" checked />
+  <div role="tabpanel" className="tab-content p-10">
 
-  <input type="radio" name="my_tabs_1" role="tab" className="tab" aria-label="In process" />
+  <div>
+   <div className="overflow-x-auto">
+  <table className="table">
+    {/* head */}
+    <thead>
+     
+    </thead>
+    <tbody>
+      {/* row  */}
+      <tr>
+        <td>
+          <div className="flex items-center gap-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={pic} alt="pic" />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold">Markas ilab</div>
+              <div className="text-sm opacity-50">4 year exp. | Expected 45k</div>
+            </div>
+            <td className='ml-16 font-bold'>Shortlisted</td>
+          </div>
+          
+        </td>
+       
+        
+        <td>12/03/24</td>
+        
+        
+    </tr>
+    </tbody> 
+  </table>
+</div>
+    
+   </div>
+  </div>
+
+  <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="In process" />
   <div role="tabpanel" className="tab-content p-10">In Process</div>
 
-  <input type="radio" name="my_tabs_1" role="tab" className="tab" aria-label="On Hold" />
+  <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="On Hold" />
   <div role="tabpanel" className="tab-content p-10">On hold</div>
 
-  <input type="radio" name="my_tabs_1" role="tab" className="tab" aria-label="Rejected" />
+  <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="Rejected" />
   <div role="tabpanel" className="tab-content p-10">Rejected</div>
   
+
+
+
+
+
+
+
 
   <div className="flex items-end content-end ml-96 font-bold">
  <div className='flex items-center '> <img src={searchicon} className='w-4 h-4' alt="" />
