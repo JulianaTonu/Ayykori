@@ -3,6 +3,7 @@ import filtericon from './../../assets/Images/filter.png'
 import AllCandidates from './AllCandidates';
 import Shortlisted from './Shortlisted';
 import { useEffect, useState } from 'react';
+import Rejected from './Rejected';
 
 
 const Application = () => {
@@ -68,7 +69,9 @@ const Application = () => {
                 <div role="tabpanel" className="tab-content p-10">On hold</div>
 
                 <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="Rejected" />
-                <div role="tabpanel" className="tab-content p-10">Rejected</div>
+                <div role="tabpanel" className="tab-content p-10">
+                    <Rejected/>
+                </div>
 
 
 

@@ -27,7 +27,6 @@ const AllCandidates = ({ allData }) => {
   }
   
  
-
   return (
     <div>
       <div className="overflow-x-auto">
@@ -61,7 +60,7 @@ const AllCandidates = ({ allData }) => {
                data.type && <button className='btn btn-sm badge badge-outline bg-green-500 my-2  mr-2 text-white'>Shortlisted</button>
             }
 
-                    <button className='btn btn-sm badge badge-outline bg-red-500 my-5 ml-4 mr-2 text-white'>Rejected</button>
+                    <button  className='btn btn-sm badge badge-outline bg-red-500 my-5 ml-4 mr-2 text-white'>Reject</button>
                     {/* <div className='ml-24'>
                     </div> */}
                   </div>
