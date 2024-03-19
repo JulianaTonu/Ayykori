@@ -17,6 +17,23 @@ const Application = () => {
             })
     }, [])
    
+
+    //shotlisted
+
+    const [shortlistedData, setShortlistedData] = useState([]);
+
+    useEffect(() => {
+      fetch("http://localhost:5000/candidates")
+        .then(res => res.json())
+        .then(data => {
+          const shortlistedCandidates = data.filter(candidate => candidate.type === 'shortlisted');
+          setShortlistedData(shortlistedCandidates);
+        })
+        .catch(error => {
+          console.error('Error fetching candidates:', error);
+        });
+    }, []);
+
     return (
         <div className="pl-5 p-3 bg-[#e0edea] min-h-full">
             <h1 className="font-bold font-mono  text-2xl mt-8">Application</h1>
@@ -29,17 +46,19 @@ const Application = () => {
                 <option>Backend Developer</option>
             </select>
 
-            <div role="tablist" className="tabs tabs-bordered py-3 mb-4  mt-5 bg-white">
-                <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold " aria-label={`All (${allData.length})`}/>
+            <div role="tablist" className="tabs tabs-bordered py-3   mt-5 bg-white">
+                <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold  " aria-label={`All (${allData.length})`}/>
                 <div role="tabpanel" className="tab-content p-10 bg-[#e0edea]">
                     <AllCandidates 
                     allData={allData}
                     ></AllCandidates>
                 </div>
 
-                <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="Shortlisted" checked />
+                <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label={`Shortlisted (${shortlistedData.length})`} checked />
                 <div role="tabpanel" className="tab-content p-10 bg-[#e0edea]">
-                    <Shortlisted />
+                    <Shortlisted 
+                    shortlistedData={shortlistedData}
+                    ></Shortlisted>
                 </div>
 
                 <input type="radio" name="my_tabs_1" role="tab" className="tab font-bold" aria-label="In process" />
@@ -59,7 +78,7 @@ const Application = () => {
 
 
 
-                <div className="flex items-end content-end ml-96 font-bold">
+                <div className="flex items-end content-end ml-80 font-bold">
                     <div className='flex items-center '> <img src={searchicon} className='w-4 h-4' alt="" />
                         <h1 className="px-2 ">Search</h1></div>
                     <div className='flex items-center px-2'> <img src={filtericon} className='w-4 h-4' alt="" />

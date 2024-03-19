@@ -2,7 +2,7 @@
 const Dash = () => {
     return (
         <div>
-            <h1>this is dash board</h1>
+            <h1 className="text-xl font-semibold">Good Morning</h1>
         </div>
     );
 };
