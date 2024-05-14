@@ -11,7 +11,7 @@ const Application = () => {
     const [allData, setAllData] =useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/candidates")
+        fetch("https://ayykori-server-side.vercel.app/candidates")
             .then(res => res.json())
             .then(data => {
                 setAllData(data)
@@ -24,7 +24,7 @@ const Application = () => {
     const [shortlistedData, setShortlistedData] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/candidates")
+      fetch("https://ayykori-server-side.vercel.app/candidates")
         .then(res => res.json())
         .then(data => {
           const shortlistedCandidates = data.filter(candidate => candidate.type === 'shortlisted');

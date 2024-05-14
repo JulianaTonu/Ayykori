@@ -4,7 +4,7 @@ const AllCandidates = ({ allData }) => {
   const [shortlistedIds, setShortlistedIds] = useState([]);
 
   const handleShortlist = id => {
-    fetch(`http://localhost:5000/candidates/type/${id}`, {
+    fetch(`https://ayykori-server-side.vercel.app/candidates/type/${id}`, {
       method: 'PUT',
     })
     .then(res => res.json())
@@ -60,8 +60,14 @@ const AllCandidates = ({ allData }) => {
                data.type && <button className='btn btn-sm badge badge-outline bg-green-500 my-2  mr-2 text-white'>Shortlisted</button>
             }
 
-                    <button  className='btn btn-sm badge badge-outline bg-red-500 my-5 ml-4 mr-2 text-white'>Reject</button>
-                    {/* <div className='ml-24'>
+{
+  !data.type &&  <button  className='btn btn-sm badge badge-outline bg-red-500 my-5 ml-4 mr-2 text-white'>Reject</button>
+
+}                    
+{
+  data.type &&  <button  className='btn btn-sm badge badge-outline bg-slate-300 my-5 ml-4 mr-2 text-white disabled'>Reject</button>
+
+}                    {/* <div className='ml-24'>
                     </div> */}
                   </div>
                 </td>
